@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on Samil Karaduman</title>
+    <link>https://samilkaraduman.github.io/blog/</link>
+    <description>Recent content in Blogs on Samil Karaduman</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jul 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://samilkaraduman.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrating from A Simple HTML and CSS Website to a Hugo site</title>
+      <link>https://samilkaraduman.github.io/blog/fromhtmltohugo/</link>
+      <pubDate>Mon, 29 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://samilkaraduman.github.io/blog/fromhtmltohugo/</guid>
+      <description>For the longest time ever, I have been building and designing my websites using simple HTML and CSS, and occasionally some JavaScript for the bells and whistles throughout these many websites I have created. Maintaining a personal website using simple HTML and CSS might not necessarily be a bad thing, but it can be quite hard and cumbersome over a long term, and using markdown is always easier and simpler, as well as markup being more readable than traditional HTML markup.</description>
+    </item>
+  </channel>
+</rss>
