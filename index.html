@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.130.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.152.2"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://samilkaraduman.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://samilkaraduman.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://samilkaraduman.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://samilkaraduman.github.io/favicon-32x32.png">
@@ -19,8 +19,8 @@
 <link rel="mask-icon" href="https://samilkaraduman.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://samilkaraduman.github.io/index.xml">
-<link rel="alternate" type="application/json" href="https://samilkaraduman.github.io/index.json">
+<link rel="alternate" type="application/rss+xml" href="https://samilkaraduman.github.io/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="https://samilkaraduman.github.io/index.json" title="json">
 <link rel="alternate" hreflang="en" href="https://samilkaraduman.github.io/">
 <noscript>
     <style>
@@ -42,33 +42,45 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-  
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
 
-<meta property="og:title" content="Samil Karaduman" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://samilkaraduman.github.io/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Samil Karaduman"/>
-<meta name="twitter:description" content=""/>
+</script><meta property="og:url" content="https://samilkaraduman.github.io/">
+  <meta property="og:site_name" content="Samil Karaduman">
+  <meta property="og:title" content="Samil Karaduman">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Samil Karaduman">
+<meta name="twitter:description" content="">
 
 <script type="application/ld+json">
 {
@@ -77,32 +89,20 @@
   "name": "Samil Karaduman",
   "url": "https://samilkaraduman.github.io/",
   "description": "",
-  "thumbnailUrl": "https://samilkaraduman.github.io/favicon.ico",
+  "logo": "https://samilkaraduman.github.io/favicon.ico",
   "sameAs": [
-      "https://youtube.com", "https://github.com/SamilKaraduman", "https://www.linkedin.com/in/samil-karaduman-3a8884292/", "https://ko-fi.com/samilkaraduman", "index.xml"
+      "https://github.com/SamilKaraduman", "https://www.linkedin.com/in/samil-karaduman-3a8884292/", "https://www.instagram.com/sktothe6ix/"
   ]
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://samilkaraduman.github.io/" accesskey="h" title="Samil Karaduman (Alt + H)">Samil Karaduman</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -126,7 +126,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://samilkaraduman.github.io/about/aboutme" title="About Me">
+                <a href="https://samilkaraduman.github.io/aboutme" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
@@ -140,20 +140,10 @@
 </header>
 <main class="main"><div class="profile">
     <div class="profile_inner">
-        <img draggable="false" src="https://samilkaraduman.github.io/profilepicture.jpg" alt="Join me on my learning adventure!" title="Join me on my learning adventure!"
+        <img draggable="false" src="https://samilkaraduman.github.io/pp.png" alt="This picture of me is NOT the result of Artificial Intelligence. This is really me, I just edited my sunglasses a bit in Pixelmator." title="This picture of me is NOT the result of Artificial Intelligence. This is really me, I just edited my sunglasses a bit in Pixelmator."
             height="120" width="120" />
         <h1>I&rsquo;m Samil!</h1>
         <span>Welcome to my ~/home on the internet.</span><div class="social-icons" >
-    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer me"
-        title="Youtube">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-    </path>
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-</svg>
-    </a>
     <a href="https://github.com/SamilKaraduman" target="_blank" rel="noopener noreferrer me"
         title="Github">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -172,21 +162,13 @@
     <circle cx="4" cy="4" r="2"></circle>
 </svg>
     </a>
-    <a href="https://ko-fi.com/samilkaraduman" target="_blank" rel="noopener noreferrer me"
-        title="Kofi">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 23 27" preserveAspectRatio="xMidYMid meet" fill="none"
-    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734c4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09c-.443-.441-3.368-3.049-4.034-3.954c-.709-.965-1.041-2.7-.091-3.71c.951-1.01 3.005-1.086 4.363.407c0 0 1.565-1.782 3.468-.963c1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" />
-</svg>
-    </a>
-    <a href="index.xml" target="_blank" rel="noopener noreferrer me"
-        title="Rss">
+    <a href="https://www.instagram.com/sktothe6ix/" target="_blank" rel="noopener noreferrer me"
+        title="Instagram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9" />
-    <path d="M4 4a16 16 0 0 1 16 16" />
-    <circle cx="5" cy="19" r="1" />
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
 </svg>
     </a>
 </div>
@@ -197,7 +179,8 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://samilkaraduman.github.io/">Samil Karaduman</a></span> · 
+        <span>&copy; 2025 <a href="https://samilkaraduman.github.io/">Samil Karaduman</a></span>
+
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -206,9 +189,14 @@
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -249,18 +237,18 @@
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
 
 </script>
-
-
+</body>
 <script type="text/javascript">
   window.$crisp = [];
   window.CRISP_WEBSITE_ID = "7eb22e34-9b03-435b-9913-dbdba32a86c4";
@@ -272,9 +260,5 @@
   })();
 </script>
 
-
-
-
-</body>
 
 </html>
